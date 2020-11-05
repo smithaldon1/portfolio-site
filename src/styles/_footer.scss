@@ -1,0 +1,19 @@
+footer {
+    background: $bgPrimary;
+    width: 100%;
+    height: 4rem;
+    .footer-div {
+        display: flex;
+        margin-left: 5rem;
+        background: $bgPrimary;
+        color: $textPrimary;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    footer {
+        display: none;
+    }
+}

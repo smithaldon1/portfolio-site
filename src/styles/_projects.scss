@@ -1,0 +1,103 @@
+// Main Styling
+.project-section {
+    background: $bgPrimary;
+    color: $textSecondary;
+    height: fit-content;
+    .projects__main {
+        #portfolio {
+            border: $textSecondary 1px solid;
+            border-radius: 20px;
+        }
+        padding: 1rem 0;
+        margin: 0 2.5rem;
+        .project {
+            padding: 2.5rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            border-top: $textSecondary 2px solid;
+            & > * {
+                flex: 1 1 500px;
+            }
+            img {
+                width: 35rem;
+                height: 20rem;
+                max-width: 35rem;
+                max-height: 20rem;
+                border-radius: 20px;
+                &:hover {
+                    filter: opacity(75%);
+                }
+            }
+            .project__text {
+                line-height: 1.25;
+                .tech {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    .des {
+                        p {
+                            &::before {
+                                content: "🖋️";
+                            }
+                        }
+                        .design {
+                            list-style: none;
+                            padding-left: 0;
+                            .design__item {
+                                text-align: center;
+                                text-transform: uppercase;
+                                margin-bottom: 0.5rem;
+                                border: $accentColor 1px solid;
+                                border-radius: 15px;
+                                padding: 0.45rem;
+                            }
+                        }
+                    }
+                    .front {
+                        p {
+                            &::before {
+                                content: "🖥️";
+                            }
+                        }
+                        .frontend {
+                            list-style: none;
+                            padding-left: 0;
+                            .frontend__item {
+                                text-align: center;
+                                text-transform: uppercase;
+                                margin-bottom: 0.5rem;
+                                border: $accentColor 1px solid;
+                                border-radius: 15px;
+                                padding: 0.45rem;
+                            }
+                        }
+                    }
+                    .back {
+                        p {
+                            &::before {
+                                content: "📁";
+                            }
+                        }
+                        .backend {
+                            list-style: none;
+                            padding-left: 0;
+                            .backend__item {
+                                text-align: center;
+                                text-transform: uppercase;
+                                margin-bottom: 0.5rem;
+                                border: $accentColor 1px solid;
+                                border-radius: 15px;
+                                padding: 0.45rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Media Queries

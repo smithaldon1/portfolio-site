@@ -1,0 +1,134 @@
+@mixin flexContainer($height, $direction, $background) {
+    display: flex;
+    height: $height;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+    background: $background;
+}
+
+main {
+    margin-left: 5rem;
+    padding: 0;
+    .intro-section {
+        @include flexContainer(100vh, column, $bgPrimary);
+        padding: 1rem;
+        text-align: center;
+        color: $textSecondary;
+        button {
+            border: none;
+            background: $btnGradient;
+            box-shadow: $nmDarkShadow, $nmLightShadow;
+            color: $accentColor;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-top: 1rem;
+            &:focus {
+                outline: none;
+                box-shadow: inset $nmDarkShadow, inset $nmLightShadow;
+            }
+        }
+    }
+    .about-section {
+        height: fit-content;
+        .background__div {
+            margin: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-wrap: wrap;
+            & > * {
+                flex: 1 1 1.5rem;
+            }
+            #resume {
+                text-align: center;
+                text-decoration: none;
+                &::before {
+                    content: "🔗 ";
+                }
+            }
+        }
+        
+        .tech-enjoy {
+            margin: 2rem;
+            text-align: center;
+            h3 {
+                font-size: 2rem;
+                margin: 2rem;
+            }
+            fieldset {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                flex-basis: 1 0 7.5rem;
+
+                svg {
+                    height: 15%;
+                    width: 12%;
+                    min-width: 4rem;
+                    min-height: 4rem;
+                    padding: 0.75rem;
+                    color: $bgPrimary;
+                    justify-self: center;
+                }
+                #html:hover {
+                    color: $html5Logo;
+                    // box-shadow: $logoDarkShadow, $logoLightShadow;
+                    // border-radius: 15px;
+                }
+                #css:hover {
+                    color: $css3Logo;
+                }
+                #js:hover {
+                    color: $jsLogo;
+                }
+                #react:hover {
+                    color: $reactLogo;
+                }
+                #python:hover {
+                    color: $pythonLogo;
+                }
+                #node:hover {
+                    color: $nodeLogo;
+                }
+                #npm:hover {
+                    color: $npmLogo;
+                }
+                #ember:hover {
+                    color: $npmLogo;
+                }
+                #bootstrap:hover {
+                    color: $bootstrapLogo;
+                }
+                #sass:hover {
+                    color: $sassLogo;
+                }
+                #git:hover {
+                    color: $gitLogo;
+                }
+                #sketch:hover {
+                    color: $sketchLogo;
+                }
+                #swift:hover {
+                    color: $swiftLogo;
+                }
+                #linux:hover {
+                    color: $linuxLogo;
+                }
+            }
+        }
+    }
+    .section-header {
+        @include flexContainer(100px, row, $accentColor);
+        color: $textSecondary;
+        font-size: 2rem;
+        padding: 0;
+        top: 0;
+        width: 100%;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+    }
+}
