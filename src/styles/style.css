@@ -57,7 +57,7 @@
   -webkit-filter: grayscale(0%) opacity(1);
           filter: grayscale(0%) opacity(1);
   background: #c76a00;
-  color: #ececec;
+  color: #e7e7e7;
 }
 
 .nav-link:hover .icon-contract {
@@ -88,7 +88,7 @@
   text-transform: uppercase;
   margin-bottom: 1rem;
   text-align: center;
-  color: #ececec;
+  color: #e7e7e7;
   background: #141418;
   font-size: 1.5rem;
   letter-spacing: 0.3ch;
@@ -138,7 +138,7 @@ main .intro-section {
   background: #23232e;
   padding: 1rem;
   text-align: center;
-  color: #ececec;
+  color: #e7e7e7;
 }
 
 main .intro-section button {
@@ -338,7 +338,7 @@ main .section-header {
       -ms-flex-align: center;
           align-items: center;
   background: #c76a00;
-  color: #ececec;
+  color: #e7e7e7;
   font-size: 2rem;
   padding: 0;
   top: 0;
@@ -415,7 +415,7 @@ main .section-header {
 }
 
 .exp-section .card .container .card__back {
-  color: #ececec;
+  color: #e7e7e7;
   background-color: #c76a00;
   -webkit-transform: rotateY(-180deg);
           transform: rotateY(-180deg);
@@ -428,7 +428,8 @@ main .section-header {
 
 .project-section {
   background: #23232e;
-  color: #ececec;
+  color: #e7e7e7;
+  font-weight: 500;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -449,7 +450,7 @@ main .section-header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-top: #ececec 2px solid;
+  border-top: #e7e7e7 2px solid;
 }
 
 .project-section .projects__main .project .column {
@@ -461,8 +462,8 @@ main .section-header {
   padding: 0 1rem;
 }
 
-.project-section .projects__main .project .column h3 {
-  font-weight: 700;
+.project-section .projects__main .project .column .project__title {
+  font-weight: 800;
 }
 
 .project-section .projects__main .project .column p {
@@ -472,7 +473,7 @@ main .section-header {
 .project-section .projects__main .project .column .img {
   width: 100%;
   border-radius: 20px;
-  border: #ececec 1px solid;
+  border: #e7e7e7 1px solid;
 }
 
 .project-section .projects__main .project .column .img:hover {
@@ -607,7 +608,7 @@ main .section-header {
 .contact-section .contact-div .alert {
   text-align: center;
   background: #79c879;
-  color: #ececec;
+  color: #e7e7e7;
   font-weight: 600 !important;
   padding: 1rem;
   margin-bottom: 0.75rem;

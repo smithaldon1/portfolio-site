@@ -5,6 +5,7 @@
 .project-section {
     background: $bgPrimary;
     color: $textSecondary;
+    font-weight: 500;
     height: fit-content;
     .projects__main {
         padding: 1rem 0;
@@ -20,8 +21,8 @@
                 max-width: 45%;
                 line-height: 1.2rem;
                 padding: 0 1rem;
-                h3 {
-                    font-weight: 700;
+                .project__title {
+                    font-weight: 800;
                 }
                 p {
                     line-height: 1.4rem;
