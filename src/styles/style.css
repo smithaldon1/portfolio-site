@@ -150,6 +150,7 @@ main .intro-section button {
   border-radius: 10px;
   padding: 1rem;
   margin-top: 1rem;
+  font-weight: 700 !important;
 }
 
 main .intro-section button:focus {
@@ -485,6 +486,7 @@ main .section-header {
 
 .project-section .projects__main .project .column .brand__img {
   padding: 0.5rem;
+  max-height: 20rem;
 }
 
 .project-section .projects__main .project .column .tech {
@@ -606,6 +608,7 @@ main .section-header {
   text-align: center;
   background: #79c879;
   color: #ececec;
+  font-weight: 600 !important;
   padding: 1rem;
   margin-bottom: 0.75rem;
   display: none;
@@ -632,41 +635,39 @@ main .section-header {
 
 .contact-section .contact-div form .input::-webkit-input-placeholder {
   font-family: 'Open Sans', sans-serif;
+  color: #23232e;
 }
 
 .contact-section .contact-div form .input:-ms-input-placeholder {
   font-family: 'Open Sans', sans-serif;
+  color: #23232e;
 }
 
 .contact-section .contact-div form .input::-ms-input-placeholder {
   font-family: 'Open Sans', sans-serif;
+  color: #23232e;
 }
 
 .contact-section .contact-div form .input::placeholder {
   font-family: 'Open Sans', sans-serif;
+  color: #23232e;
 }
 
 .contact-section .contact-div form button {
   margin: 1rem 0 2rem 0;
   padding: 1rem;
   border: none;
-  color: #23232e;
+  color: #c76a00;
   border-radius: 10px;
   font-size: 1rem;
-  background: linear-gradient(145deg, #ffffff, #e6e6e6);
-  -webkit-box-shadow: 5px 5px 13px #e0e0e0, -5px -5px 13px #ffffff;
-          box-shadow: 5px 5px 13px #e0e0e0, -5px -5px 13px #ffffff;
+  font-weight: 700 !important;
+  background: #23232e;
 }
 
 .contact-section .contact-div form button:focus {
   outline: none;
-  -webkit-box-shadow: inset 5px 5px 13px #e0e0e0, inset -5px -5px 13px #ffffff;
-          box-shadow: inset 5px 5px 13px #e0e0e0, inset -5px -5px 13px #ffffff;
-}
-
-.contact-section .contact-div form button:hover {
-  -webkit-filter: opacity(0.7);
-          filter: opacity(0.7);
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
 }
 
 @media screen and (max-width: 600px) {

@@ -15,6 +15,7 @@ main {
         padding: 1rem;
         text-align: center;
         color: $textSecondary;
+        
         button {
             border: none;
             background: $btnGradient;
@@ -23,6 +24,7 @@ main {
             border-radius: 10px;
             padding: 1rem;
             margin-top: 1rem;
+            font-weight: 700 !important;
             &:focus {
                 outline: none;
                 box-shadow: inset $nmDarkShadow, inset $nmLightShadow;

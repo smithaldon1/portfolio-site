@@ -20,6 +20,7 @@
             text-align: center;
             background: #79c879;
             color: $textSecondary;
+            font-weight: 600 !important;
             padding: 1rem;
             margin-bottom: 0.75rem;
             display: none;
@@ -40,23 +41,21 @@
                 font-family: 'Open Sans', sans-serif;
                 &::placeholder {
                     font-family: 'Open Sans', sans-serif;
+                    color: $bgPrimary;
                 }
             }
             button {
                 margin: 1rem 0 2rem 0;
                 padding: 1rem;
                 border: none;
-                color: $bgPrimary;
+                color: $accentColor;
                 border-radius: 10px;
                 font-size: 1rem;
-                background: $contactBtnGradient;
-                box-shadow: $contactBtnDarkShadow, $contactBtnLightShadow;
+                font-weight: 700 !important;
+                background: $bgPrimary;
                 &:focus {
                     outline: none;
-                    box-shadow: inset $contactBtnDarkShadow, inset $contactBtnLightShadow;
-                }
-                &:hover {
-                    filter: opacity(0.7);
+                    transform: scale(0.97);
                 }
             }
         }
