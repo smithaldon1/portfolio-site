@@ -27,7 +27,8 @@
                 max-height: 20rem;
                 border-radius: 20px;
                 &:hover {
-                    filter: opacity(75%);
+                    transform: scale(0.95);
+                    transition: transform ease-in-out 350ms;
                 }
             }
             .project__text {

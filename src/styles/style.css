@@ -432,8 +432,12 @@ main .section-header {
 }
 
 .project-section .projects__main .project img:hover {
-  -webkit-filter: opacity(75%);
-          filter: opacity(75%);
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: -webkit-transform ease-in-out 350ms;
+  transition: -webkit-transform ease-in-out 350ms;
+  transition: transform ease-in-out 350ms;
+  transition: transform ease-in-out 350ms, -webkit-transform ease-in-out 350ms;
 }
 
 .project-section .projects__main .project .project__text {
