@@ -179,7 +179,6 @@ main .about-section .background__div {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 1.2rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -188,6 +187,22 @@ main .about-section .background__div > * {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 1.5rem;
           flex: 1 1 1.5rem;
+}
+
+main .about-section .background__div h3 {
+  font-size: 1.5rem;
+}
+
+main .about-section .background__div fieldset {
+  max-width: 75%;
+}
+
+main .about-section .background__div fieldset p {
+  font-size: 1.25rem;
+  line-height: 1.4rem;
+  word-break: keep-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 main .about-section .background__div #resume {
@@ -200,13 +215,25 @@ main .about-section .background__div #resume::before {
 }
 
 main .about-section .tech-enjoy {
-  margin: 2rem;
+  margin: 4rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main .about-section .tech-enjoy h3 {
-  font-size: 2rem;
-  margin: 2rem;
+  font-size: 1.5rem;
 }
 
 main .about-section .tech-enjoy fieldset {
@@ -224,13 +251,14 @@ main .about-section .tech-enjoy fieldset {
       flex-wrap: wrap;
   -ms-flex-preferred-size: 1 0 7.5rem;
       flex-basis: 1 0 7.5rem;
+  max-width: 75%;
 }
 
 main .about-section .tech-enjoy fieldset svg {
-  height: 15%;
-  width: 12%;
-  min-width: 4rem;
-  min-height: 4rem;
+  min-width: 5rem;
+  min-height: 5rem;
+  max-height: 25%;
+  max-width: 25%;
   padding: 0.75rem;
   color: #23232e;
   -ms-grid-column-align: center;
@@ -318,6 +346,15 @@ main .section-header {
   font-weight: 600;
 }
 
+@media screen and (max-width: 760px) {
+  .background__div fieldset {
+    max-width: 100% !important;
+  }
+  .tech-enjoy fieldset {
+    max-width: 100% !important;
+  }
+}
+
 .exp-section {
   background-color: #f5f7f8;
   height: 100vh;
@@ -383,6 +420,11 @@ main .section-header {
           transform: rotateY(-180deg);
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .project-section {
   background: #23232e;
   color: #ececec;
@@ -393,58 +435,59 @@ main .section-header {
 
 .project-section .projects__main {
   padding: 1rem 0;
-  margin: 0 2.5rem;
-}
-
-.project-section .projects__main #portfolio {
-  border: #ececec 1px solid;
-  border-radius: 20px;
+  margin: 0 1rem;
 }
 
 .project-section .projects__main .project {
-  padding: 2.5rem 0;
+  padding: 1rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   border-top: #ececec 2px solid;
 }
 
-.project-section .projects__main .project > * {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 500px;
-          flex: 1 1 500px;
+.project-section .projects__main .project .column {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  max-width: 45%;
+  line-height: 1.2rem;
+  padding: 0 1rem;
 }
 
-.project-section .projects__main .project img {
-  width: 35rem;
-  height: 20rem;
-  max-width: 35rem;
-  max-height: 20rem;
+.project-section .projects__main .project .column h3 {
+  font-weight: 700;
+}
+
+.project-section .projects__main .project .column p {
+  line-height: 1.4rem;
+}
+
+.project-section .projects__main .project .column .img {
+  width: 100%;
   border-radius: 20px;
+  border: #ececec 1px solid;
 }
 
-.project-section .projects__main .project img:hover {
+.project-section .projects__main .project .column .img:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
-  -webkit-transition: -webkit-transform ease-in-out 350ms;
-  transition: -webkit-transform ease-in-out 350ms;
-  transition: transform ease-in-out 350ms;
-  transition: transform ease-in-out 350ms, -webkit-transform ease-in-out 350ms;
+  -webkit-transition: -webkit-transform ease 200ms;
+  transition: -webkit-transform ease 200ms;
+  transition: transform ease 200ms;
+  transition: transform ease 200ms, -webkit-transform ease 200ms;
 }
 
-.project-section .projects__main .project .project__text {
-  line-height: 1.25;
+.project-section .projects__main .project .column .brand__img {
+  padding: 0.5rem;
 }
 
-.project-section .projects__main .project .project__text .tech {
+.project-section .projects__main .project .column .tech {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -458,16 +501,16 @@ main .section-header {
       justify-content: space-around;
 }
 
-.project-section .projects__main .project .project__text .tech .des p::before {
-  content: "🖋️";
+.project-section .projects__main .project .column .tech .des p::before {
+  content: "🖋️ ";
 }
 
-.project-section .projects__main .project .project__text .tech .des .design {
+.project-section .projects__main .project .column .tech .des .design {
   list-style: none;
   padding-left: 0;
 }
 
-.project-section .projects__main .project .project__text .tech .des .design .design__item {
+.project-section .projects__main .project .column .tech .des .design .design__item {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
@@ -476,16 +519,16 @@ main .section-header {
   padding: 0.45rem;
 }
 
-.project-section .projects__main .project .project__text .tech .front p::before {
-  content: "🖥️";
+.project-section .projects__main .project .column .tech .front p::before {
+  content: "🖥️ ";
 }
 
-.project-section .projects__main .project .project__text .tech .front .frontend {
+.project-section .projects__main .project .column .tech .front .frontend {
   list-style: none;
   padding-left: 0;
 }
 
-.project-section .projects__main .project .project__text .tech .front .frontend .frontend__item {
+.project-section .projects__main .project .column .tech .front .frontend .frontend__item {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
@@ -494,22 +537,34 @@ main .section-header {
   padding: 0.45rem;
 }
 
-.project-section .projects__main .project .project__text .tech .back p::before {
-  content: "📁";
+.project-section .projects__main .project .column .tech .back p::before {
+  content: "📁 ";
 }
 
-.project-section .projects__main .project .project__text .tech .back .backend {
+.project-section .projects__main .project .column .tech .back .backend {
   list-style: none;
   padding-left: 0;
 }
 
-.project-section .projects__main .project .project__text .tech .back .backend .backend__item {
+.project-section .projects__main .project .column .tech .back .backend .backend__item {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
   border: #c76a00 1px solid;
   border-radius: 15px;
   padding: 0.45rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .column {
+    -webkit-box-flex: 100% !important;
+        -ms-flex: 100% !important;
+            flex: 100% !important;
+    max-width: 100% !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .contact-section {
@@ -525,7 +580,7 @@ main .section-header {
 }
 
 .contact-section .contact-div {
-  margin: 1.5rem 5rem;
+  margin: 1.5rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -543,7 +598,7 @@ main .section-header {
 
 .contact-section .contact-div h2 {
   color: #23232e;
-  width: 30rem;
+  width: 50%;
   text-align: center;
 }
 
@@ -616,7 +671,13 @@ main .section-header {
 
 @media screen and (max-width: 600px) {
   .contact-section .contact-div form button {
-    margin-bottom: 5rem;
+    margin-bottom: 5rem !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .contact-div h2 {
+    width: 100% !important;
   }
 }
 
@@ -695,6 +756,9 @@ body::-webkit-scrollbar-thumb {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .nav-item:last-child {
+    display: none;
   }
   main {
     margin: 0;

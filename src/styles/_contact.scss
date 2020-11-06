@@ -6,14 +6,14 @@
         display: none;
     }
     .contact-div {
-        margin: 1.5rem 5rem;
+        margin: 1.5rem 2rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         h2 {
             color: $bgPrimary;
-            width: 30rem;
+            width: 50%;
             text-align: center;
         }
         .alert {
@@ -68,9 +68,16 @@
         .contact-div {
             form {
                 button {
-                    margin-bottom: 5rem;
+                    margin-bottom: 5rem !important;
                 }
             }
+        }
+    }
+}
+@media screen and (max-width: 1000px) {
+    .contact-div {
+        h2 {
+            width: 100% !important;
         }
     }
 }

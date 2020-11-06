@@ -61,7 +61,13 @@ body {
     .nav-link {
         justify-content: center;
     }
-  
+
+    .nav-item {
+        &:last-child {
+            display: none;
+        }
+    }
+
     main {
         margin: 0;
     }

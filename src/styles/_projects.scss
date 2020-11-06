@@ -1,38 +1,43 @@
 // Main Styling
+* {
+    box-sizing: border-box;
+}
 .project-section {
     background: $bgPrimary;
     color: $textSecondary;
     height: fit-content;
     .projects__main {
-        #portfolio {
-            border: $textSecondary 1px solid;
-            border-radius: 20px;
-        }
         padding: 1rem 0;
-        margin: 0 2.5rem;
+        margin: 0 1rem;
         .project {
-            padding: 2.5rem 0;
+            padding: 1rem 0;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
             align-items: center;
             border-top: $textSecondary 2px solid;
-            & > * {
-                flex: 1 1 500px;
-            }
-            img {
-                width: 35rem;
-                height: 20rem;
-                max-width: 35rem;
-                max-height: 20rem;
-                border-radius: 20px;
-                &:hover {
-                    transform: scale(0.95);
-                    transition: transform ease-in-out 350ms;
+            .column {
+                flex: 50%;
+                max-width: 45%;
+                line-height: 1.2rem;
+                padding: 0 1rem;
+                h3 {
+                    font-weight: 700;
                 }
-            }
-            .project__text {
-                line-height: 1.25;
+                p {
+                    line-height: 1.4rem;
+                }
+                .img {
+                    width: 100%;
+                    border-radius: 20px;
+                    border: $textSecondary 1px solid;
+                    &:hover {
+                        transform: scale(0.95);
+                        transition: transform ease 200ms;
+                    }
+                }
+                .brand__img {
+                    padding: 0.5rem;
+                }
                 .tech {
                     display: flex;
                     flex-direction: row;
@@ -41,7 +46,7 @@
                     .des {
                         p {
                             &::before {
-                                content: "🖋️";
+                                content: "🖋️ ";
                             }
                         }
                         .design {
@@ -60,7 +65,7 @@
                     .front {
                         p {
                             &::before {
-                                content: "🖥️";
+                                content: "🖥️ ";
                             }
                         }
                         .frontend {
@@ -79,7 +84,7 @@
                     .back {
                         p {
                             &::before {
-                                content: "📁";
+                                content: "📁 ";
                             }
                         }
                         .backend {
@@ -102,3 +107,10 @@
 }
 
 // Media Queries
+@media screen and (max-width: 1000px) {
+    .column {
+        flex: 100% !important;
+        max-width: 100% !important;
+        justify-content: center;
+    }
+}
